@@ -1,0 +1,282 @@
+Python 3 - 
+--------------------------------------------
+
+1.Syntax - 
+      a. Indentation - Python uses indentation to indicate a block of code.
+	1.{No curly braces}
+	     ex. - print ("Hello, world")
+
+	2.No semicolon for termination;
+
+2.Variables -
+	     1.have to assign value when created.
+	     2.No Declaration, No need to mention Data type
+	     a = 5         # a is of type int
+	     a = "Hello" # a is now of type str
+	     print(x)
+
+	    3.Casting
+	       x = float(1)/2
+	       print(x)
+
+	       x = str(5)    # x will be '3'
+	       y = int(5)    # y will be 3
+	       z = float(5)  # z will be 3.0
+
+	    4.Variable Names(Rules) - 
+		* A variable name must start with a letter or the underscore character
+		* A variable name cannot start with a number
+		* A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+		* Variable names are case-sensitive
+		* Camel Case, Pascal Case(First Cap), Snake Case.
+Ex. 
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+
+Ex.
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+
+Ex.
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+
+	5. The Global Variable
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+
+print("Python is " + x)
+
+
+	6.The global Keyword - To create a global variable inside a function, you can use the global keyword.
+Ex. 
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)
+
+
+
+3.Data Types
+
+	Text Type:	str
+	Numeric Types:	int, float, complex
+	Sequence Types:	list, tuple, range
+	Mapping Type:	dict
+	Set Types:		set, frozenset
+	Boolean Type:	bool
+	Binary Types:	bytes, bytearray, memoryview
+Ex.
+x = 5
+print(type(x))
+
+
+4. String
+
+print("Hello")
+print('Hello')
+
+#Multiple Lines
+a = """Hello Class...,
+How are you?"""
+print(a)
+
+#Count Length
+print(len(a))
+
+#Find in String
+print("free" in a)
+
+#More on String
+
+"hello"+"world"	"helloworld"	# concatenation
+"hello\n"*3	"hellohellohello" 	# repetition
+"hello"[0]		"h"		# indexing
+"hello"[-1]		"o"		# (from end)
+"hello"[1:4]	"ell"		# slicing
+len("hello")	5		# size
+"hello" < "jello"	1		# comparison
+"e" in "hello"	1		# search
+
+
+5. List
+
+import random
+print(random.randrange(1, 10))
+
+
+print("hello\n"*3)
+
+a = [0,1,2,3,4]		#creating List (just like Array)
+print(a)
+
+a.append(5)		# [0,1,2,3,4,5] Poped last element
+print(a)
+
+a.pop()			# [0,1,2,3,4]
+print(a)
+
+a.insert(0, 42)		# [42,0,1,2,3,4]
+print(a)
+
+a.pop(0)			# [0,1,2,3,4] Poped 0th Index
+print(a)
+
+a.reverse()		# [4,3,2,1,0]
+print(a)
+
+a.sort()			# [0,1,2,3,4]
+print(a)
+
+
+6. Tuple - A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets.
+
+Ex.
+mystuple = ("Suraj", "Angel Infotech", "Aurangabad")
+print(mytuple)
+print(mytuple[0])
+
+mytuple = ("suraj",)		#Tuple with Single value(comma at end)
+
+
+7. Set - A set is a collection which is both unordered and unindexed. Sets are written with curly brackets.
+Ex. 
+myset = {"Suraj", "Angel Infotech", "Aurangabad"}
+print(myset)
+
+
+8. Dictionary - Dictionaries are used to store data values in key:value pairs. A dictionary is a collection which is ordered, changeable and does not allow duplicates.
+
+Ex.
+cardict = {
+  "brand": "TATA",
+  "model": "Nexon",
+  "year": 2020
+}
+print(cardict)
+
+#Adding Dictionary Item
+cardict = ["color"] = "red"
+print(cardict)
+
+#Udating Dictionary
+cardict.update({"year":"2021"})
+
+#Delete Item
+cardict.pop({"year":"2021"})
+
+#Delete Dictionary Item
+del cardict["year"]
+
+#Delete Dictionary
+del cardict
+
+#Empty the Dictionary
+cardict.clear()
+
+9. If - Else 
+
+#Simple If
+a = 33
+b = 200
+  if b > a:
+    print("b is grtr than a")
+
+#If Else 
+a = 15
+b = 10
+  if b > a:
+    print("b is grtr than a")
+  else:
+    print("a is gtr than b")
+
+#If Else If Ladder
+a = 15
+b = 10
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+
+#Use of and (&&)
+a = 10
+b = 5
+c = 10
+if (a > b and c > a):
+  print("Both conditions are True")
+
+#use of or (||)
+a = 10
+b = 5
+c = 10
+if (a > b or c > a):
+  print("either one is  True")
+
+
+10. Loops
+
+a. While Loop
+Ex.
+i = 1
+while i < 10:
+  print(i)
+  i += 1
+
+b. For Loop
+Ex.
+for i in range(31):
+    if i == 0:
+        continue
+    if i%3 == 0:
+        print (i)
+        if i == 30:
+            print ("Bingo!")
+print ("---")
+
+
+for x in "Suraj"
+  print(x)
+
+#Nested For Loop
+for x in range(1,10):
+  for y in range(1,10):
+    print(x*y, end ="\t")
+  print("\n")
+
+11. Function
+#def keyword: to create Function
+
+def myFunction():
+  print("Hello Class")
+
+myFunction()
+
+#Pass the Argument
+def myFunction(city):
+  print("I am from "+city)
+
+myFunction("Aurangabad")
+
+#Return Value
+def myFunction(city):
+  return ("I am from "+city)
+
+print(myFunction("Aurangabad"))
